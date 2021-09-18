@@ -1,8 +1,10 @@
+import "./_nav.scss";
+
 const Nav = () => {
     return (
-        <nav>
-            <p>Search</p>
-            <p>Filter</p>
+        <nav className="nav">
+            <p className="p">Search</p>
+            <p className="p">Filter</p>
         </nav>
     );
 };

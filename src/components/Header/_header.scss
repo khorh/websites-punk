@@ -1,6 +1,11 @@
 @use "../../assets/variables" as *;
+.header {
+    padding: 16px 16px 32px;
+    background-color: $color-white;
+}
+
 .h1, .h2 {
-    color: $color-white;
+    color: $color-primary-main;
     margin: 0;
 }
 

@@ -1,9 +1,9 @@
+import "./_main.scss";
 import CardList from "../CardList/CardList";
 
 const Main = () => {
     return (
-        <main>
-            <h3>List of craft beers</h3>
+        <main className="main">
             <CardList />
         </main>
     );
