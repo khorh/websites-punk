@@ -4,9 +4,6 @@ body {
   max-width: 1239px;
   margin: 0 auto;
   background-color: $color-primary-main;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: $font-family-primary;
+  color: $color-primary-main;
 }
