@@ -1,0 +1,13 @@
+@use "./assets/variables" as *;
+
+body {
+  max-width: 1439px;
+  margin: 32px auto 64px;
+  background-color: $color-secondary-main;
+  font-family: 'Bebas Neue', cursive;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
