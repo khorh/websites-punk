@@ -4,7 +4,7 @@ body {
   max-width: 1439px;
   margin: 32px auto 64px;
   background-color: $color-secondary-main;
-  font-family: 'Bebas Neue', cursive;
+  font-family: $font-family-secondary;
 }
 
 code {
