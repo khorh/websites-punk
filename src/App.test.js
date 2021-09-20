@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Header from "./components/Header/Header";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+it("should be a header", () => {
+  render(<Header />);
+  const title = screen.getByRole("heading",{name: /punk beers/i});
+  const subtitle = screen.getByRole("heading",{name: /learn about brewdog's craft beers/i});
+  expect(title).toBeInTheDocument();
+  expect(subtitle).toBeInTheDocument();
 });
