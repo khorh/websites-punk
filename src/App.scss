@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
-}
+@use "./src/assets/variables" as *;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 32px;
+  background-color: $color-primary-light;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  &__search {
+    display: flex;
+    flex-direction: column;
+
+    &-label {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+    }
+
+    &-input {
+      width: 240px;
+      padding: 8px 16px;
+    }
+  }
+
+  &__filter-label, &__sort-label {
+    margin: 0 0 8px 0;
+    font-size: 24px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main {
+  border: 1px solid $color-primary-light;
+  padding: 16px 16px 32px;
+  background-color: $color-white;
+}
+
+.card__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  justify-content: space-between;
+  margin: 16px;
+  border: 1px solid $color-primary-dark;
+  padding: 32px 16px;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  &__image {
+    height: 160px;
   }
-  to {
-    transform: rotate(360deg);
+
+  &__tagline, &__card__text {
+    font-family: $font-family-secondary;
   }
 }
