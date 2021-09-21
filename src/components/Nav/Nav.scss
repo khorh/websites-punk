@@ -1,0 +1,9 @@
+@use "./src/assets/variables" as *;
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 32px;
+    background-color: $color-primary-light;
+}

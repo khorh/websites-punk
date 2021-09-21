@@ -1,0 +1,8 @@
+@use "./src/assets/variables" as *;
+
+.filter {
+    &__label {
+        margin: 0 0 8px 0;
+        font-size: 24px;
+    }
+}
