@@ -5,9 +5,10 @@ const SearchBox = (props) => {
 
     return (
         <div className="search">
-            <p className="search__label">Search</p>
+            <label htmlFor="search" className="search__label">Search</label>
             <input
                 onInput={searchInput}
+                id="search"
                 className="search__input"
                 placeholder="START TYPING NAME TO SEARCH"
                 type="text"

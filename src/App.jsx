@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
 import './App.scss';
 import Header from "./components/Header/Header";
+import Nav from "./components/Nav/Nav";
 import Main from "./components/Main/Main";
 import drinks from "./data/beers";
-import Nav from "./components/Nav/Nav";
 
 const App = () => {
     const [beers, setBeers] = useState([]);
