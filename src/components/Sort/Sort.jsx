@@ -1,11 +1,12 @@
 import "./Sort.scss";
+import {MdSort} from "react-icons/md";
 
 const Sort = (props) => {
     const {sortByProductNameAZ, sortByAbvLowHigh, sortByPhLowHigh} = props;
 
     return (
         <div>
-            <p className="sort__label">Sort</p>
+            <p className="sort__label">Sort <MdSort /></p>
             <div>
                 <input onClick={sortByProductNameAZ} id="productName" name="filterSortOption"  type="radio" />
                 <label htmlFor="productName">Product Name - A-Z</label>

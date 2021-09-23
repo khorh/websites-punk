@@ -1,4 +1,5 @@
 import "./SearchBox.scss";
+import {MdSearch} from "react-icons/md";
 
 const SearchBox = (props) => {
     const {searchInput} = props;
@@ -6,13 +7,16 @@ const SearchBox = (props) => {
     return (
         <div className="search">
             <label htmlFor="search" className="search__label">Search</label>
-            <input
-                onInput={searchInput}
-                id="search"
-                className="search__input"
-                placeholder="START TYPING NAME TO SEARCH"
-                type="text"
-            />
+            <div>
+                <input
+                    onInput={searchInput}
+                    id="search"
+                    className="search__input"
+                    placeholder="ENTER BEER NAME"
+                    type="text"
+                />
+                <button><MdSearch /></button>
+            </div>
         </div>
     );
 };
