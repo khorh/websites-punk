@@ -25,13 +25,13 @@ const App = () => {
     // FILTER
     // Filter by ABV above 6%
     const filterByAbvAbove6 = () => {
-        const beersFilteredByAbv = drinks.filter(beer => beer.abv > 6);
+        const beersFilteredByAbv = beers.filter(beer => beer.abv > 6);
         setBeers(beersFilteredByAbv);
     };
 
     // Filter by PH lower than 4
     const filterByPhLowerThan4 = () => {
-        const beersFilteredByPh = drinks.filter(beer => beer.ph < 4);
+        const beersFilteredByPh = beers.filter(beer => beer.ph < 4);
         setBeers(beersFilteredByPh);
     };
 
@@ -48,19 +48,19 @@ const App = () => {
     };
 
     const sortByProductNameAZ = () => {
-        const beersSortedByName = drinks.filter(beer => beer).sort(sortAscendingAZ);
+        const beersSortedByName = beers.filter(beer => beer).sort(sortAscendingAZ);
         setBeers(beersSortedByName);
     }
 
     // Sort by ABV (ascending order by key 'abv')
     const sortByAbvLowHigh = () => {
-        const beersSortedByAbv = drinks.filter(beer => beer).sort((a, b) => a.abv - b.abv);
+        const beersSortedByAbv = beers.filter(beer => beer).sort((a, b) => a.abv - b.abv);
         setBeers(beersSortedByAbv);
     };
 
     // Sort by PH (ascending order by key 'ph')
     const sortByPhLowHigh = () => {
-        const beersSortedByPh = drinks.filter(beer => beer).sort((a, b) => a.ph - b.ph);
+        const beersSortedByPh = beers.filter(beer => beer).sort((a, b) => a.ph - b.ph);
         setBeers(beersSortedByPh);
     };
 

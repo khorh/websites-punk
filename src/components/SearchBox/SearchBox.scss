@@ -10,7 +10,9 @@
     }
 
     &__input {
-        width: 240px;
+        width: 160px;
+        border-radius: 4px;
+        border: 1px solid $color-primary-main;
         padding: 8px 16px;
     }
 }
