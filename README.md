@@ -1,6 +1,6 @@
 # WEBSITES PUNK
 
-![tools morse code screen](./assets/images/tools-morse.png)
+![websites punk screen](./src/assets/images/websites-punk.png)
 
 ### Overview
 A React craft beer website to enable you to search, filter and sort different beers.
