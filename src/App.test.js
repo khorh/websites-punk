@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import Header from "./components/Header/Header";
 import SearchBox from "./components/SearchBox/SearchBox";
 import Filter from "./components/Filter/Filter";
