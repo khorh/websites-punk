@@ -28,6 +28,7 @@ A screen showing the header, navigation bar (containing the search, filter and s
 - The SCSS uses B.E.M methodology for naming classes.
 
 #### 3.4 Javascript/React
+- Fetches data from an API
 - Uses _useEffect_ to provide all the beer cards on load.
 - Uses _useState_ to change the beers cards based on the search, filter and sort criteria.
 - Search is driven by _onInput_ of the beer's name.
