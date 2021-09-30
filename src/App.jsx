@@ -3,19 +3,27 @@ import './App.scss';
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
 import Main from "./components/Main/Main";
-import drinks from "./data/beers";
 
 const App = () => {
     const [beers, setBeers] = useState([]);
 
+    // Fetch API
+    const fetchBeers = () =>{
+        fetch("https://api.punkapi.com/v2/beers")
+            .then(response => response.json())
+            .then(jsonResponse => setBeers(jsonResponse))
+            .catch(err => console.log("error"))
+    };
+
+    // Initial state
     useEffect(() => {
-        setBeers(drinks)
+        fetchBeers();
     }, []);
 
     // Search
     const searchInput = (event) => {
         const sanitisedInput = event.target.value.toLowerCase();
-        const searchBeers = drinks.filter(beer => {
+        const searchBeers = beers.filter(beer => {
             const sanitisedBeerName = beer.name.toLowerCase();
             return sanitisedBeerName.includes(sanitisedInput);
         })
