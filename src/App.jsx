@@ -7,7 +7,7 @@ import Main from "./components/Main/Main";
 const App = () => {
     const [beers, setBeers] = useState([]);
 
-    // Fetch API
+    // FETCH API
     const fetchBeers = () =>{
         fetch("https://api.punkapi.com/v2/beers")
             .then(response => response.json())
@@ -15,12 +15,12 @@ const App = () => {
             .catch(err => console.log("error"))
     };
 
-    // Initial state
+    // INITIAL STATE
     useEffect(() => {
         fetchBeers();
     }, []);
 
-    // Search
+    // SEARCH
     const searchInput = (event) => {
         const sanitisedInput = event.target.value.toLowerCase();
         const searchBeers = beers.filter(beer => {
@@ -72,6 +72,10 @@ const App = () => {
         setBeers(beersSortedByPh);
     };
 
+    // RECORDS
+    // Showing X of Y beers
+    const showingCurrentBeers = beers.length;
+
     return (
         <div className="App">
             <Header />
@@ -82,6 +86,7 @@ const App = () => {
                 sortByProductNameAZ={sortByProductNameAZ}
                 sortByAbvLowHigh={sortByAbvLowHigh}
                 sortByPhLowHigh={sortByPhLowHigh}
+                showingCurrentBeers={showingCurrentBeers}
             />
             <Main beersArr={beers} />
         </div>

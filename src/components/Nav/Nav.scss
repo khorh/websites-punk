@@ -2,8 +2,13 @@
 
 .nav {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
     padding: 32px;
     background-color: $color-primary-light;
+
+    &__searchFilterSort, &__recordsView {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
 }
