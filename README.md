@@ -29,11 +29,15 @@ A screen showing the header, navigation bar (containing the search, filter and s
 
 #### 3.4 Javascript/React
 - Fetches data from an API
-- Uses _useEffect_ to provide all the beer cards on load.
-- Uses _useState_ to change the beers cards based on the search, filter and sort criteria.
+- Uses _useEffect_ to provide all the beer cards on initial load.
+- Uses _useState_ to
+  - change the beers cards based on the search, filter and sort criteria, and
+  - toggle between different views.
 - Search is driven by _onInput_ of the beer's name.
 - Filtering by ABV above 6% and PH lower than 4 uses _array filters_.
 - Sorting by product name A-Z, ABV low to high and ph low to high uses _array filters_ and _sort_.
+- Showing X different beers is driven by the useState.
+- List and module views are driven by the useState.
 
 #### 3.5 React Testing Library
 - Test scenarios include:
