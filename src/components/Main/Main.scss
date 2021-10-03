@@ -1,12 +1,16 @@
 @use "../../assets/styles/variables" as *;
 
 .main {
-    border: 1px solid $color-primary-light;
     padding: 16px 16px 32px;
     background-color: $color-white;
-}
 
-.card__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    &--state--list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    &--state--module {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

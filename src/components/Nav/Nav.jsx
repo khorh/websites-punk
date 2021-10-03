@@ -6,7 +6,7 @@ import Records from "../Records/Records";
 import View from "../View/View";
 
 const Nav = (props) => {
-    const {searchInput, filterByAbvAbove6, filterByPhLowerThan4, sortByProductNameAZ, sortByAbvLowHigh, sortByPhLowHigh, showingCurrentBeers} = props;
+    const {searchInput, filterByAbvAbove6, filterByPhLowerThan4, sortByProductNameAZ, sortByAbvLowHigh, sortByPhLowHigh, showingCurrentBeers, setToggleView} = props;
 
     return (
         <nav className="nav">
@@ -17,7 +17,7 @@ const Nav = (props) => {
             </div>
             <div className="nav__recordsView">
                 <Records showingCurrentBeers={showingCurrentBeers} />
-                <View />
+                <View setToggleView={setToggleView} />
             </div>
         </nav>
     );

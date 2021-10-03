@@ -6,6 +6,7 @@ import Main from "./components/Main/Main";
 
 const App = () => {
     const [beers, setBeers] = useState([]);
+    const [toggleView, setToggleView] = useState("--state--list");
 
     // FETCH API
     const fetchBeers = () =>{
@@ -73,7 +74,7 @@ const App = () => {
     };
 
     // RECORDS
-    // Showing X of Y beers
+    // Showing X beers
     const showingCurrentBeers = beers.length;
 
     return (
@@ -87,8 +88,9 @@ const App = () => {
                 sortByAbvLowHigh={sortByAbvLowHigh}
                 sortByPhLowHigh={sortByPhLowHigh}
                 showingCurrentBeers={showingCurrentBeers}
+                setToggleView={setToggleView}
             />
-            <Main beersArr={beers} />
+            <Main beersArr={beers} toggleView={toggleView} />
         </div>
     );
 };

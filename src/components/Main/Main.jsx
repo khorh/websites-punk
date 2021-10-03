@@ -2,15 +2,13 @@ import "./Main.scss";
 import Card from "../Card/Card";
 
 const Main = (props) => {
-    const {beersArr} = props;
+    const {beersArr, toggleView} = props;
 
-    const beerCard = beersArr.map(beer => <Card beer={beer} />);
+    const beerCard = beersArr.map(beer => <Card beer={beer} toggleView={toggleView} />);
 
     return (
-        <main className="main">
-            <section className="card__list">
-                {beerCard}
-            </section>
+        <main className={`main main${toggleView}`}>
+            {beerCard}
         </main>
     );
 };
